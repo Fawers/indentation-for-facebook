@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+ul, ol {
+    padding: 5px;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+header, footer, .wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #E9E9E9;
+}
+
+header {
+    height: 50px;
+    background-color: #FFFBED;
+    border-radius: 0 0 5px 5px;
+}
+
+header h2 {
+    padding: 10px 0 0 20px;
+}
+
+
+
+main {
+    position: relative;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #FFFBED;
+    min-height: 545px;
+    width: 100%;
+    padding: 10px;
+}
+
+
+#settings {
+    height: 50px;
+    margin: 0 10px 10px 10px;
+    border: 1px solid;
+    border-color: #a9a9a9;
+    font-size: .8em;
+}
+
+#settings select,
+#settings input {
+    margin: 0 5px 0 5px;
+}
+
+form {
+    margin: 5px;
+    padding: 5px;
+}
+
+textarea {
+    max-width: 920px;
+    max-height: 355px;
+    min-width: 920px;
+    min-height: 355px;
+    font-family: monospace;
+    padding: 10px;
+}
+
+textarea[name=result] {
+    min-width: 941;
+    max-width: 941px;
+}
+
+span#center {
+    position: absolute;
+    font-size: 10em;
+    font-family: serif;
+    font-style: italic;
+    left: 35%;
+    top: 30%;
+}
+
+div.separator {
+    width: 98%;
+    height: 1px;
+    margin: 0 auto;
+    border-bottom: solid 1px;
+    border-color: #a9a9a9;
+}
+
+.about p {
+    margin: 5px 0 5px 0;
+}
+
+
+#written-powered-hosted {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #FFFBED;
+    width: 150px;
+    height: 60px;
+    font-size: 0.7em;
+    border-radius: 5px;
+}
+
+
+footer {
+    position: absolute;
+    background-color: #FFFBED;
+    height: 30px;
+    left: 50%;
+    margin-left: -480px;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+}
+
+footer .links {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+
+}
+
+footer .links a {
+    margin: 0 5px 0 5px;
+    font-size: 0.8em;
+}

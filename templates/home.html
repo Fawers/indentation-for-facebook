@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <fieldset id="settings">
+        <legend>Settings (applied for both methods below)</legend>
+        <p>
+            As default indentation character, I use
+            <select id="indent-char">
+            {% for char in ('spaces', 'tabs') %}
+                <option value="{{ char }}">{{ char }}</option>
+            {% endfor %}
+            </select>.
+            And I use
+            <select id="indent-level">
+            {% for level in range(1,9) %}
+                <option value="{{ level }}" {% if level == 4 %}selected{% endif %}>{{ level }}</option>
+            {% endfor %}
+            </select>
+            of them per indentation level.
+            Also, I'd like to
+            <select id="download">
+                <option value="no">see the result in the browser</option>
+                <option value="yes">download the result as a file</option>
+            </select>.
+        </p>
+    </fieldset>
+
+    <div class="separator"></div>
+
+    <form action="{{ url_for('result') }}" method="POST">
+        <textarea name="content" placeholder="Your code here" wrap="off"></textarea>
+        <br>
+        <input type="hidden" name="from" value="textarea">
+        <input type="hidden" name="indent-char" value="spaces">
+        <input type="hidden" name="indent-level" value="4">
+        <input type="hidden" name="download" value="no">
+        <input type="submit" value="Do it!">
+    </form>
+
+    <div class="separator"></div>
+
+    <form action="{{ url_for('result') }}" method="POST" enctype="multipart/form-data">
+        <p>Alternatively, upload your source code here!</p>
+        <input type="file" id="file" name="content">
+        <input type="hidden" name="from" value="file">
+        <input type="hidden" name="indent-char" value="spaces">
+        <input type="hidden" name="indent-level" value="4">
+        <input type="hidden" name="download" value="no">
+        <input type="submit" value="Do it!">
+    </form>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>{{ occurences }} {% if occurences == 1 %}occurence was{% else %}occurences were{% endif %} found and replaced.</p><br>
+    <textarea name="result">{{ content }}</textarea>
+    <p style="margin-top: 20px;"><a href="{{ url_for('home') }}">Let's do it again!</a></p>
+{% endblock %}
