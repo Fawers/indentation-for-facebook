@@ -59,7 +59,7 @@ def result():
     origin = request.form.get('from', 'textarea')
 
     if origin == 'file':
-        content = request.files['content'].read()
+        content = request.files['content'].read().decode()
     elif origin == 'textarea':
         content = request.form['content']
     else:
